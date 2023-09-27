@@ -12,8 +12,9 @@
   font-weight: bold;
 }
 #layout-header nav .auth-links ul {
-  margin: 6% 5px;
+  margin: 5% 5px;
   display: flex;
+  list-style: none;
 }
 #layout-header nav .auth-links ul li {
   margin-right: 10px;
@@ -21,5 +22,4 @@
 #layout-header nav a {
   color: white;
   text-decoration: none;
-  margin-right: 20px;
 }
