@@ -1,9 +1,8 @@
-<link rel="stylesheet" href="/css/post.css" />
-<li>
+<li id="post-<%= post._id %>">
   <p>
     <% if (locals.user && locals.user.id == post.user.id){ %>
-    <small id="delete">
-      <a href="/posts/destroy/<%= post.id %>">Delete</a>
+    <small>
+      <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">X</a>
     </small>
     <% } %> <%= post.content %>
     <br />

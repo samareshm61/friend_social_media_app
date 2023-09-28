@@ -8,6 +8,7 @@ const db = require("./config/mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
+const passportGoogle = require("./config/passport-google-oauth-strategy");
 const MongoStore = require("connect-mongo");
 //const saasMiddleware=require('node-saas')
 const flash = require("connect-flash");
@@ -18,6 +19,7 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 app.use(express.static("./assets"));
+app.use("/uploads", express.static(__dirname + "/uploads"));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout
